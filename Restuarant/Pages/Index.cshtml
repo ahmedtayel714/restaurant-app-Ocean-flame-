@@ -1,0 +1,384 @@
+﻿@page
+@model Restuarant.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home";
+    ViewData["ShowHero"] = true;
+}
+
+    <section id="about">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 about-text" data-aos="fade-up">
+                        <h4>At Ocean Flame Restaurant,</h4>
+                        <p class="font-italic mb-4">we are passionate about bringing together the finest seafood, meats, and sandwiches.</p>
+                        <ul>
+                            <li><i class="icofont-check-circled"></i>Our team is dedicated to providing a welcoming atmosphere.</li>
+                            <li><i class="icofont-check-circled"></i>reative dishes, and an exceptional dining experience for every guest.</li>
+                            <li><i class="icofont-check-circled"></i>We focus on quality, taste, and service to make every visit memorable.</li>
+                        </ul>
+                        <a href="#menu">Explore Our Menu</a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 about-img" data-aos="zoom-in-up">
+                        <div class="divImg">
+                            <img src="img/about.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <span>Why Us</span>
+                <h1>Why Choose Ccean Flame</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-12 whyUs-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="whyUs-box">
+                        <h2>01</h2>
+                        <h4> Authentic Egyptian Taste</h4>
+                        <p>We serve real Egyptian homemade dishes — from fresh falafel and foul to delicious traditional meals.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 whyUs-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="whyUs-box">
+                        <h2>02</h2>
+                        <h4>Fresh & Daily Cooked Meals</h4>
+                        <p>Every dish is prepared daily to keep the same great flavor and quality we love it all completly.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 whyUs-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="whyUs-box">
+                        <h2>03</h2>
+                        <h4> Friendly Atmosphere & Great Value</h4>
+                        <p>Enjoy your meal in a cozy, family-friendly place with fair prices that suit everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <span>Menu</span>
+                <h1>Check Our Delicious Menu</h1>
+            </div>
+            <div class="menu-content" data-aos="fade-up">
+                <div class="row menu-filter-wrapper">
+                    <div class="menu-filter col-lg-12 justify-content-center box-menu">
+                        <ul class="filters ">
+                            <li class="filter active" data-filter="*">All</li>
+                            <li class="filter" data-filter=".fish">Seafood</li>
+                            <li class="filter" data-filter=".sandwitches">Sandwiches</li>
+                            <li class="filter" data-filter=".meats">Casseroles</li>
+                            <li class="filter" data-filter=".specialty">Pastries</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row menu-item box-list">
+                    @foreach (var item in Model.MenuItems)
+                    {
+                        <div class="col-lg-6 col-md-12 foods mix box-item @Model.GetCategoryClass(item.Category)">
+                            <img src="@item.ImageUrl" alt="@item.Name" class="food-img">
+                            <div class="food-item">
+                                <a href="">@item.Name</a>
+                                <span>@item.Price EG</span>
+                            </div>
+                            <div class="materials">
+                                <p>@(string.IsNullOrEmpty(item.Description) ? "Lorem, Ipsum, Fake, Production, Simplicity" : item.Description)</p>
+                                <div class="order-controls">
+                                    <input type="number" min="1" value="1" class="qty">
+                                    <button class="add-btn" data-name="@item.Name" data-price="@item.Price" onclick="addToOrder(this)">Add to Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order-summary" class="order-section">
+        <div class="container">
+            <h2>🧾 Your Order</h2>
+            <table id="orderTable">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <h3>Total : <span id="total">0</span> EG</h3>
+            <div class="order-actions">
+                <button id="confirmOrderBtn" class="btn-confirm">✓ Confirm Order</button>
+                <button id="resetOrderBtn" class="btn-reset">↻ Reset Order</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="book-table">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <span>Reservation</span>
+                <h1>Book a Table</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 table-form" data-aos="fade-up" data-aos-delay="200">
+                    <form id="bookTableForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="bookTableName" autocomplete="off" placeholder="Your Name" required>
+                                <p id="nameError"></p>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="text" class="form-control" id="bookTableEmail" autocomplete="off" placeholder="Your Email" required>
+                                <p id="emailError"></p>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="tel" class="form-control" id="bookTablePhone" autocomplete="off" placeholder="Your Phone" required>
+                                <p id="phoneError"></p>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="number" class="form-control" id="bookTablePeople" autocomplete="off" placeholder="# of People" required>
+                                <p id="peopleError"></p>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea class="form-control" rows="5" id="bookTableText" autocomplete="off" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-block col-lg-2 col-sm-3 mx-auto">Book Table</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="gallery">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <span>Gallery</span>
+                <h1>Some Photos from Our Restaurant</h1>
+            </div>
+        </div>
+        <div class="container-fluid gallery-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                    <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-1.jpg"><img src="img/gallery/gallery-1.jpg" alt="image alt" /></a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                    <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-2.jpg"><img src="img/gallery/gallery-2.jpg" alt="image alt" /></a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                    <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-3.jpg"><img src="img/gallery/gallery-3.jpg" alt="image alt" /></a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                    <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-4.jpg"><img src="img/gallery/gallery-4.jpg" alt="image alt" /></a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                    <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-5.jpg"><img src="img/gallery/gallery-5.jpg" alt="image alt" /></a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                    <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-6.jpg"><img src="img/gallery/gallery-6.jpg" alt="image alt" /></a>
+                </div>
+                <div class="container-fluid gallery-content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                            <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-1.jpg"><img src="img/gallery/gallery-1.jpg" alt="image alt" /></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                            <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-2.jpg"><img src="img/gallery/gallery-2.jpg" alt="image alt" /></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                            <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-3.jpg"><img src="img/gallery/gallery-3.jpg" alt="image alt" /></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                            <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-4.jpg"><img src="img/gallery/gallery-4.jpg" alt="image alt" /></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                            <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-5.jpg"><img src="img/gallery/gallery-5.jpg" alt="image alt" /></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                            <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-6.jpg"><img src="img/gallery/gallery-6.jpg" alt="image alt" /></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                            <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-7.jpg"><img src="img/gallery/gallery-7.jpg" alt="image alt" /></a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12 gallery-item">
+                            <a class="venobox" data-gall="myGallery" href="img/gallery/gallery-8.jpg"><img src="img/gallery/gallery-8.jpg" alt="image alt" /></a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <span>Contact</span>
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+        <div class="container-fluid google-map" data-aos="fade-up">
+            <div class="row">
+                <div class="col-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d851.7584598705942!2d27.2257838!3d31.3580454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1461ff0064d348f3%3A0x5e469440927232fc!2z2KjYp9iy2YjZg9inIEJhem9va2E!5e0!3m2!1sen!2seg!4v1762530352461!5m2!1sen!2seg" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" data-aos="fade-up">
+                <div class="col-lg-4 col-md-12 contact-information">
+                    <ul>
+                        <li>
+                            <i class="icofont-google-map"></i>
+                            <p>Address:</p>
+                            <span>marsa, matruh</span>
+                        </li>
+                        <li>
+                            <i class="icofont-clock-time"></i>
+                            <p>Opening Hours:</p>
+                            <span>Saturday to Thursday: </span><br><span> 9:00 AM - 12:00 PM</span>
+                        </li>
+                        <li>
+                            <i class="icofont-ui-message"></i>
+                            <p>Email:</p>
+                            <span>ahmedtayel714@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="icofont-ui-call"></i>
+                            <p>Contact:</p>
+                            <span>
+                                +201097512288
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-8 col-md-12 contact-send-message">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" autocomplete="off" id="contactName" placeholder="Your Name" required>
+                                <p id="contactNameError"></p>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" autocomplete="off" id="contactEmail" placeholder="Your Email" required>
+                                <p id="contactEmailError"></p>
+                            </div>
+                            <div class="form-group col-12">
+                                <input type="text" class="form-control" autocomplete="off" id="contactSubject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea class="form-control" id="contactText" autocomplete="off" rows="5" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-block col-lg-3 col-md-4 col-sm-4 mx-auto">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>let order = [];
+
+        function addToOrder(button) {
+            const name = button.dataset.name;
+            const price = parseFloat(button.dataset.price);
+            const qtyInput = button.parentElement.querySelector('.qty');
+            const quantity = parseInt(qtyInput.value);
+
+            const existingItem = order.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+                existingItem.total = existingItem.quantity * price;
+            } else {
+                order.push({
+                    name: name,
+                    quantity: quantity,
+                    total: price * quantity
+                });
+            }
+
+            renderOrder();
+        }
+
+        function renderOrder() {
+            const tbody = document.querySelector('#orderTable tbody');
+            tbody.innerHTML = '';
+            let totalPrice = 0;
+
+            order.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                                <td>${item.name}</td>
+                                <td>${item.quantity}</td>
+                                <td>${item.total} EG</td>
+                                `;
+                tbody.appendChild(row);
+                totalPrice += item.total;
+            });
+
+            document.getElementById('total').textContent = totalPrice;
+        }
+
+        // Confirm Order Button
+        const confirmBtn = document.getElementById('confirmOrderBtn');
+        confirmBtn.addEventListener('click', async () => {
+            if (order.length === 0) {
+                alert("You haven't selected any items yet!");
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/order/confirm', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(order)
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    alert(`✅ ${data.message}\nTotal Price: ${data.total} EG`);
+                    order = []; // Clear order after confirmation
+                    renderOrder();
+                } else {
+                    const errorText = await response.text();
+                    alert("Error confirming order: " + errorText);
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Failed to connect to server.");
+            }
+        });
+
+        // Reset Order Button
+        const resetBtn = document.getElementById('resetOrderBtn');
+        resetBtn.addEventListener('click', () => {
+            // Clear the order array
+            order = [];
+            
+            // Re-render the empty order table
+            renderOrder();
+            
+            // Reset all quantity inputs to 1
+            const allQtyInputs = document.querySelectorAll('.qty');
+            allQtyInputs.forEach(input => {
+                input.value = 1;
+            });
+            
+            alert('Order has been reset!');
+        });</script>

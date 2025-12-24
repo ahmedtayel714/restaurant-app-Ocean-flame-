@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{38654F2E-5B33-4DC0-877A-18900D09B17B}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pages/Admin/Login.cshtml.cs">
+    <Files>
+      <File FileName="Migrations/20251123111951_InitialCreate.cs" />
+      <File FileName="Data/RestaurantContext.cs" />
+      <File FileName="Data/UnitOfWork.cs" />
+      <File FileName="Core/Interfaces/IGenericRepository.cs" />
+      <File FileName="Core/Interfaces/IUnitOfWork.cs" />
+      <File FileName="controllers/OrderController.cs" />
+      <File FileName="Pages/Admin/Index.cshtml.cs" />
+      <File FileName="Pages/Admin/Login.cshtml.cs" Line="9" Column="28" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Restuarant" expanded="True">
+            <Node name="Restuarant" expanded="True">
+              <Node name="Migrations" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Index.cshtml" expanded="True" />
+                  <Node name="Login.cshtml" expanded="True" />
+                  <Node name="Menu.cshtml" expanded="True" />
+                  <Node name="Orders.cshtml" expanded="True" />
+                  <Node name="Reservations.cshtml" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Restuarant PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

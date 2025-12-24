@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{97B6A93B-965D-4868-9505-816353FAB609}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Restuarant/Views/AdminDashboard/Index.cshtml">
+    <Files>
+      <File FileName="Restuarant/Pages/Admin/Login.cshtml.cs" />
+      <File FileName="Restuarant/Services/Factory/PaymentFactory.cs" Line="1" Column="1" />
+      <File FileName="Restuarant/controllers/AdminDashboardController.cs" Line="1" Column="1" />
+      <File FileName="Restuarant/Core/Interfaces/IUnitOfWork.cs" />
+      <File FileName="Restuarant/Core/Interfaces/IGenericRepository.cs" />
+      <File FileName="Restuarant/logs/app.log" />
+      <File FileName="Restuarant/Views/AdminDashboard/Index.cshtml" Line="9" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Restuarant" expanded="True">
+            <Node name="Restuarant" expanded="True">
+              <Node name="controllers" expanded="True" />
+              <Node name="Core" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="logs" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Login.cshtml" expanded="True" />
+                </Node>
+                <Node name="Error.cshtml" expanded="True" />
+                <Node name="Index.cshtml" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="Factory" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="AdminDashboard" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Restuarant PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

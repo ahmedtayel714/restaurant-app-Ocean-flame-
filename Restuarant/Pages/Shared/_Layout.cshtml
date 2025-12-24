@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/img/icon.png">
+    <title>@ViewData["Title"] - Ocean Flame</title>
+    <link rel="stylesheet" href="~/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="~/icofont/icofont.min.css">
+    <link href="https://v1.fontapi.ir/css/Yekan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="~/content-filter/js/modernizr.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/venobox/venobox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css" />
+
+    <link rel="stylesheet" href="~/css/jquery.Modal.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+    <div id="loading">
+    </div>
+    <header id="home">
+        <div class="overlay">
+            <div class="header-contetnt">
+                <div class="container flex-grow-1">
+                    <div class="row firstHeader">
+                        <div class="fast-contect d-flex col-lg-6 col-md-7 col-6">
+                            <i class="icofont-phone"></i> <span> +2010 97512288</span>
+                            <span class="header-time-open"><i class="icofont-clock-time mr-2"></i>  Opening Hours: 9:00 AM - 12:00 PM</span>
+                        </div>
+                        <div class="col-lg-6 col-md-5 col-6 language">
+                            <ul>
+                                <li class="active"><a href="#">En</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="nav-defult">
+                    <div class="container d-flex">
+                        <div class="navbar">
+                            <ul>
+                                <li class="active">
+                                    <a href="/#home">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/#menu">Menu</a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/Index" target="_blank">Admin</a>
+                                </li>
+                                <li>
+                                    <a href="/#gallery">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="/#about">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="/#contact">Contact</a>
+                                </li>
+                                <li id="reservation">
+                                    <a href="/#book-table">Book a Table</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div id="responsive-menu-btn">
+                            <span class="top"></span>
+                            <span class="main"></span>
+                            <span class="bottom"></span>
+                        </div>
+                        <div id="banner" class="mr-auto">
+                            <h1>
+                                <a href="#" class="mr-auto"><b> Ocean Flame </b></a>
+                            </h1>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="nav-mobile d-lg-none">
+                    <div class="container d-flex">
+                        <div class="navbar">
+                            <ul>
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/#about">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="/#menu">Menu</a>
+                                </li>
+                                <li>
+                                    <a href="/#gallery">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="/#contact">Contact</a>
+                                </li>
+
+                                <li id="reservation">
+                                    <a href="/#book-table">Book a Table</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                
+                @if (ViewData["ShowHero"] as bool? == true)
+                {
+                    <div class="main-header" data-aos="zoom-in">
+                        <div class="container">
+                            <div class="row align-items-center main-header-content">
+                                <div class="col-lg-8 col-md-12 text-header">
+                                    <h1>Welcome to <span>Ocean Flame</span></h1>
+                                    <p>Serving delicious and diverse food for over 18 years</p>
+                                    <a href="#menu">Our Menu</a>
+                                    <a href="#book-table">Book a Table</a>
+                                </div>
+                                <div class="col-lg-4 col-md-12 mt-md-4 sh-video d-flex align-items-center justify-content-center">
+                                    <a href="#" class="video-item"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 information">
+                        <h1>Ocean Flame</h1>
+                        <div class="footer-address">
+                            <p>Egypt</p>
+                            <p>Matruh</p>
+                        </div>
+                        <div class="footer-contact">
+                            <p><b>Contact: </b>+201097512288</p>
+                            <p><b>Email: </b>ahmedtayel714@gmail.com</p>
+                        </div>
+                        <div class="social-media">
+                            <a href=""><i class="icofont-twitter"></i></a>
+                            <a href=""><i class="icofont-facebook"></i></a>
+                            <a href=""><i class="icofont-instagram"></i></a>
+                            <a href=""><i class="icofont-linkedin"></i></a>
+                            <a href=""><i class="icofont-skype"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 useful-links">
+                        <h5>Useful Links</h5>
+                        <ul>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="/index.html">Home</a>
+                            </li>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="/#about">About Us</a>
+                            </li>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="">Services</a>
+                            </li>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="">Terms of Service</a>
+                            </li>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 our-service">
+                        <h5>Our Services</h5>
+                        <ul>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="">Web Design</a>
+                            </li>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="">Web Development</a>
+                            </li>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="">Product Management</a>
+                            </li>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="">Marketing</a>
+                            </li>
+                            <li>
+                                <i class="icofont-simple-left"></i>
+                                <a href="">Graphic Design</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 newsletter">
+                        <h5>Our Newsletter</h5>
+                        <div class="newsletter-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
+                        <form class="subscribe">
+                            <input type="email">
+                            <button>Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 copyright">
+                        <p>&copy; All rights reserved by Ocean Flame.</p>
+                    </div>
+                    <div class="col-12 designed-by">
+                        <p>Designed by <b>Ahmed Ayman</b></p>
+                    </div>
+                    <div class="col-12 social-link">
+                        <a href="https://github.com/ahmedtayel714" target='_blank'><img src="https://img.icons8.com/material-rounded/24/000000/github.png" style="border-radius: 50%; background-color: #fff;" /></a>
+                        <span>❤️</span>
+                        <span>❤️</span>
+                        <a href="https://www.linkedin.com/in/ahmed-tayel-3331362b9" target='_blank'><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-linkedin-in-logo-used-for-professional-networking-logo-color-tal-revivo.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="back-to-top">
+        <a href=""><i class="icofont-arrow-up"></i></a>
+    </div>
+
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/content-filter/js/jquery.mixitup.min.js"></script>
+    <script src="~/content-filter/js/main.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="~/venobox/venobox.min.js"></script>
+    <script src="~/js/jquery.Modal.js"></script>
+    <script src="https://unpkg.com/persian-date@1.1.0/dist/persian-date.min.js"></script>
+    <script src="https://unpkg.com/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
+
+    <script src="~/js/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

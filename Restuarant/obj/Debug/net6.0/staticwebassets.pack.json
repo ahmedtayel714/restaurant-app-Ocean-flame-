@@ -1,0 +1,577 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/obj/Debug/net6.0/scopedcss/projectbundle/Restuarant.bundle.scp.css",
+      "PackagePath": "staticwebassets/Restuarant.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/css/bootstrap-rtl.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap-rtl.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/css/jquery.Modal.css",
+      "PackagePath": "staticwebassets/css/jquery.Modal.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/LICENSE",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/README.md",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/README.md"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/demo/index.html",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/demo/index.html"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/demo/js/img-previewer.min.js",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/demo/js/img-previewer.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/dist/bundle.css",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/dist/bundle.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/dist/img-previewer.js",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/dist/img-previewer.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/dist/img-previewer.min.js",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/dist/img-previewer.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/dist/index.css",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/dist/index.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/package-lock.json",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/package-lock.json"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/package.json",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/package.json"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/rollup.config.js",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/rollup.config.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/src/index.css",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/src/index.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/src/index.js",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/src/index.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/src/js/assign.js",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/src/js/assign.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/src/js/runAnimation.js",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/src/js/runAnimation.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/src/js/utils.js",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/src/js/utils.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/image-viewer-lightbox-previewer/test/ssr-import.test.js",
+      "PackagePath": "staticwebassets/image-viewer-lightbox-previewer/test/ssr-import.test.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/.DS_Store",
+      "PackagePath": "staticwebassets/img/.DS_Store"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/about-bg.jpg",
+      "PackagePath": "staticwebassets/img/about-bg.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/about.jpg",
+      "PackagePath": "staticwebassets/img/about.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/apple-touch-icon.png",
+      "PackagePath": "staticwebassets/img/apple-touch-icon.png"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/chefs/chefs-1.jpg",
+      "PackagePath": "staticwebassets/img/chefs/chefs-1.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/chefs/chefs-2.jpg",
+      "PackagePath": "staticwebassets/img/chefs/chefs-2.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/chefs/chefs-3.jpg",
+      "PackagePath": "staticwebassets/img/chefs/chefs-3.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/event-birthday.jpg",
+      "PackagePath": "staticwebassets/img/event-birthday.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/event-custom.jpg",
+      "PackagePath": "staticwebassets/img/event-custom.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/event-private.jpg",
+      "PackagePath": "staticwebassets/img/event-private.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/events-bg.jpg",
+      "PackagePath": "staticwebassets/img/events-bg.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/favicon.png",
+      "PackagePath": "staticwebassets/img/favicon.png"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/gallery/gallery-1.jpg",
+      "PackagePath": "staticwebassets/img/gallery/gallery-1.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/gallery/gallery-2.jpg",
+      "PackagePath": "staticwebassets/img/gallery/gallery-2.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/gallery/gallery-3.jpg",
+      "PackagePath": "staticwebassets/img/gallery/gallery-3.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/gallery/gallery-4.jpg",
+      "PackagePath": "staticwebassets/img/gallery/gallery-4.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/gallery/gallery-5.jpg",
+      "PackagePath": "staticwebassets/img/gallery/gallery-5.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/gallery/gallery-6.jpg",
+      "PackagePath": "staticwebassets/img/gallery/gallery-6.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/gallery/gallery-7.jpg",
+      "PackagePath": "staticwebassets/img/gallery/gallery-7.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/gallery/gallery-8.jpg",
+      "PackagePath": "staticwebassets/img/gallery/gallery-8.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/hero-bg.jpg",
+      "PackagePath": "staticwebassets/img/hero-bg.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/icon.png",
+      "PackagePath": "staticwebassets/img/icon.png"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/loading/Double Ring-6.7s-200px.gif",
+      "PackagePath": "staticwebassets/img/loading/Double Ring-6.7s-200px.gif"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/.DS_Store",
+      "PackagePath": "staticwebassets/img/menu/.DS_Store"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/Meat-Casserole.jpeg",
+      "PackagePath": "staticwebassets/img/menu/Meat-Casserole.jpeg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/Pasta-Casserole.jpeg",
+      "PackagePath": "staticwebassets/img/menu/Pasta-Casserole.jpeg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/beans.jpg",
+      "PackagePath": "staticwebassets/img/menu/beans.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/bread-barrel.jpg",
+      "PackagePath": "staticwebassets/img/menu/bread-barrel.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/burger.jpg",
+      "PackagePath": "staticwebassets/img/menu/burger.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/caesar.jpg",
+      "PackagePath": "staticwebassets/img/menu/caesar.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/cake.jpg",
+      "PackagePath": "staticwebassets/img/menu/cake.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/crepe.jpeg",
+      "PackagePath": "staticwebassets/img/menu/crepe.jpeg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/greek-salad.jpg",
+      "PackagePath": "staticwebassets/img/menu/greek-salad.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/green_burger.jpg",
+      "PackagePath": "staticwebassets/img/menu/green_burger.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/lobster-bisque.jpg",
+      "PackagePath": "staticwebassets/img/menu/lobster-bisque.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/lobster-roll.jpg",
+      "PackagePath": "staticwebassets/img/menu/lobster-roll.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/mozzarella.jpg",
+      "PackagePath": "staticwebassets/img/menu/mozzarella.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/pizza.jpeg",
+      "PackagePath": "staticwebassets/img/menu/pizza.jpeg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/seafood.jpeg",
+      "PackagePath": "staticwebassets/img/menu/seafood.jpeg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/spinach-salad.jpg",
+      "PackagePath": "staticwebassets/img/menu/spinach-salad.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/menu/tuscan-grilled.jpg",
+      "PackagePath": "staticwebassets/img/menu/tuscan-grilled.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/specials-1.png",
+      "PackagePath": "staticwebassets/img/specials-1.png"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/specials-2.png",
+      "PackagePath": "staticwebassets/img/specials-2.png"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/specials-3.png",
+      "PackagePath": "staticwebassets/img/specials-3.png"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/specials-4.png",
+      "PackagePath": "staticwebassets/img/specials-4.png"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/specials-5.png",
+      "PackagePath": "staticwebassets/img/specials-5.png"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/testimonials/testimonials-1.jpg",
+      "PackagePath": "staticwebassets/img/testimonials/testimonials-1.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/testimonials/testimonials-2.jpg",
+      "PackagePath": "staticwebassets/img/testimonials/testimonials-2.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/testimonials/testimonials-3.jpg",
+      "PackagePath": "staticwebassets/img/testimonials/testimonials-3.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/testimonials/testimonials-4.jpg",
+      "PackagePath": "staticwebassets/img/testimonials/testimonials-4.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/img/testimonials/testimonials-5.jpg",
+      "PackagePath": "staticwebassets/img/testimonials/testimonials-5.jpg"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/js/jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets/js/jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/js/jquery.Modal.js",
+      "PackagePath": "staticwebassets/js/jquery.Modal.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/js/script.js",
+      "PackagePath": "staticwebassets/js/script.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/venobox/venobox.css",
+      "PackagePath": "staticwebassets/venobox/venobox.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/venobox/venobox.js",
+      "PackagePath": "staticwebassets/venobox/venobox.js"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/venobox/venobox.min.css",
+      "PackagePath": "staticwebassets/venobox/venobox.min.css"
+    },
+    {
+      "Id": "/Users/ahmedtayel/Documents/software development/project/Restuarant/Restuarant/wwwroot/venobox/venobox.min.js",
+      "PackagePath": "staticwebassets/venobox/venobox.min.js"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.Restuarant.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.Restuarant.props",
+      "PackagePath": "build\\Restuarant.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.Restuarant.props",
+      "PackagePath": "buildMultiTargeting\\Restuarant.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.Restuarant.props",
+      "PackagePath": "buildTransitive\\Restuarant.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

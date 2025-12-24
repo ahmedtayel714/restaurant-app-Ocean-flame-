@@ -1,0 +1,162 @@
+@{
+    Layout = "~/Pages/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "MVC Dashboard";
+}
+
+<div class="container-fluid pt-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard <span class="badge bg-secondary fs-6 align-middle">MVC</span></h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Alerts -->
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i> @TempData["Message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Section: LINQ Reports -->
+    <h4 class="mt-4 mb-3 text-muted">Live Reports (LINQ)</h4>
+    <div class="row g-4 mb-5">
+        <!-- Daily Sales Card -->
+        <div class="col-xl-6 col-md-6">
+            <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                <div class="card-body p-4 position-relative">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
+                            <i class="bi bi-currency-dollar fs-3"></i>
+                        </div>
+                        <span class="badge bg-success bg-opacity-10 text-success">+ Today</span>
+                    </div>
+                    <h2 class="display-5 fw-bold mb-1">@ViewBag.DailySales.ToString("C")</h2>
+                    <p class="text-muted mb-0">Total Daily Revenue</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Top Selling Items Card -->
+        <div class="col-xl-6 col-md-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-white border-0 py-3 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0 fw-bold"><i class="bi bi-graph-up-arrow text-success me-2"></i>Top Selling Items</h5>
+                    <button class="btn btn-sm btn-light rounded-pill px-3">View All</button>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush">
+                         @if (ViewBag.TopItems != null)
+                        {
+                            foreach (var item in (IEnumerable<RestaurantApp.Services.Reporting.TopItemDto>)ViewBag.TopItems)
+                            {
+                                <div class="list-group-item d-flex justify-content-between align-items-center py-3 px-4 border-bottom-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-light p-2 rounded me-3">
+                                            <i class="bi bi-box-seam text-secondary"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">@item.ItemName</h6>
+                                            <small class="text-muted">Top Performer</small>
+                                        </div>
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">@item.TotalQuantity Sold</span>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section: System Controls -->
+    <h4 class="mt-4 mb-3 text-muted">System Controls</h4>
+    <div class="row g-4">
+        <!-- Configuration (Singleton) -->
+        <div class="col-xl-6 col-lg-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-dark text-white py-3">
+                    <h5 class="mb-0"><i class="bi bi-sliders me-2"></i>Configuration (Singleton)</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="UpdateSettings" method="post">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Tax Rate</label>
+                                <div class="input-group">
+                                    <input type="number" step="0.01" name="taxRate" class="form-control" value="@ViewBag.TaxRate" />
+                                    <span class="input-group-text">%</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Currency</label>
+                                <input type="text" name="currency" class="form-control" value="@ViewBag.Currency" />
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check form-switch p-3 bg-light rounded border">
+                                    <input class="form-check-input ms-0 me-3" type="checkbox" name="isOpen" value="true" @(ViewBag.IsOpen ? "checked" : "") id="isOpenSwitch">
+                                    <label class="form-check-label fw-bold" for="isOpenSwitch">Restaurant Open Status</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-dark w-100 py-2"><i class="bi bi-save me-2"></i>Update Settings</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Test (Factory) -->
+        <div class="col-xl-6 col-lg-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-primary text-white py-3">
+                    <h5 class="mb-0"><i class="bi bi-credit-card-fill me-2"></i>Payment Gateway (Factory)</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="TestPayment" method="post">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Select Provider</label>
+                            <div class="d-flex gap-3">
+                                <div class="form-check flex-fill p-3 border rounded bg-light">
+                                    <input class="form-check-input" type="radio" name="type" value="CreditCard" id="cc" checked>
+                                    <label class="form-check-label w-100" for="cc">
+                                        <i class="bi bi-credit-card me-2"></i>Credit Card
+                                    </label>
+                                </div>
+                                <div class="form-check flex-fill p-3 border rounded bg-light">
+                                    <input class="form-check-input" type="radio" name="type" value="PayPal" id="pp">
+                                    <label class="form-check-label w-100" for="pp">
+                                        <i class="bi bi-paypal me-2"></i>PayPal
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Amount</label>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text">$</span>
+                                <input type="number" name="amount" class="form-control" value="100.00" />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2"><i class="bi bi-lightning-charge-fill me-2"></i>Process Transaction</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

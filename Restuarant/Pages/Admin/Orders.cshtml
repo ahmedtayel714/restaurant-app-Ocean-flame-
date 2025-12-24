@@ -1,0 +1,134 @@
+@page
+@model Restuarant.Pages.Admin.OrdersModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Manage Orders";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>Manage Orders</h1>
+        <form method="post" asp-page-handler="Reset" onsubmit="return confirm('Are you sure you want to delete ALL orders? This cannot be undone.');">
+            <button type="submit" class="btn btn-danger">Reset All Orders</button>
+        </form>
+    </div>
+    <div class="table-container">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model.Orders)
+                {
+                    <tr>
+                        <td>#@order.Id</td>
+                        <td>@order.CreatedAt.ToString("g")</td>
+                        <td>@order.TotalPrice.ToString("C")</td>
+                        <td>
+                            <span class="badge @(order.Status == "Completed" ? "bg-success" : order.Status == "Cancelled" ? "bg-danger" : order.Status == "Accepted" ? "bg-primary" : "bg-warning text-dark")">
+                                @order.Status
+                            </span>
+                        </td>
+                        <td>
+                            @if (order.Status != "Completed" && order.Status != "Cancelled")
+                            {
+                                <form method="post" class="d-inline">
+                                    <input type="hidden" name="id" value="@order.Id" />
+                                    <input type="hidden" name="status" value="Accepted" />
+                                    <button type="submit" class="btn btn-sm btn-outline-primary" @(order.Status == "Accepted" ? "disabled" : "")>Accept</button>
+                                </form>
+                                <form method="post" class="d-inline">
+                                    <input type="hidden" name="id" value="@order.Id" />
+                                    <input type="hidden" name="status" value="Completed" />
+                                    <button type="submit" class="btn btn-sm btn-outline-success">Complete</button>
+                                </form>
+                                <form method="post" class="d-inline">
+                                    <input type="hidden" name="id" value="@order.Id" />
+                                    <input type="hidden" name="status" value="Cancelled" />
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">Cancel</button>
+                                </form>
+                            }
+                            <button class="btn btn-sm btn-info text-white view-items-btn" 
+                                    data-id="@order.Id" 
+                                    data-items='@System.Text.Json.JsonSerializer.Serialize(order.Items)'>
+                                View Items
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Order Items Modal -->
+<div class="modal fade" id="orderItemsModal" tabindex="-1" aria-labelledby="orderItemsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderItemsModalLabel">Order Items #<span id="modalOrderId"></span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modalItemsBody">
+                        <!-- Items will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var orderItemsModal = document.getElementById('orderItemsModal');
+        orderItemsModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+            // If button is null (triggered manually), try to find the button that was clicked
+            if (!button) {
+                // This part handles the click event listener below
+                return; 
+            }
+        });
+
+        document.querySelectorAll('.view-items-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                var orderId = this.getAttribute('data-id');
+                var items = JSON.parse(this.getAttribute('data-items'));
+                
+                document.getElementById('modalOrderId').textContent = orderId;
+                var tbody = document.getElementById('modalItemsBody');
+                tbody.innerHTML = '';
+
+                items.forEach(item => {
+                    var row = `<tr>
+                        <td>${item.Name}</td>
+                        <td>${item.Quantity}</td>
+                        <td>$${item.Total}</td>
+                    </tr>`;
+                    tbody.innerHTML += row;
+                });
+
+                var modal = new bootstrap.Modal(document.getElementById('orderItemsModal'));
+                modal.show();
+            });
+        });
+    });
+</script>

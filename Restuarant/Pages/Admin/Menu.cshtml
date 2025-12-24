@@ -1,0 +1,193 @@
+@page
+@model Restuarant.Pages.Admin.MenuModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Manage Menu";
+}
+
+<div class="container-fluid">
+    <h1>Manage Menu</h1>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Add New Item</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-page-handler="Add">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" name="Name" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <input type="text" class="form-control" name="Description" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Category</label>
+                            <select class="form-control" name="Category" required>
+                                <option value="Seafood">Seafood</option>
+                                <option value="Sandwiches">Sandwiches</option>
+                                <option value="Casseroles">Casseroles</option>
+                                <option value="Pastries">Pastries</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Price</label>
+                            <input type="number" step="0.01" class="form-control" name="Price" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Stock Quantity</label>
+                            <input type="number" class="form-control" name="StockQuantity" value="20" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Image URL</label>
+                            <input type="text" class="form-control" name="ImageUrl" />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Add Item</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="table-container">
+                <table class="table table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.MenuItems)
+                        {
+                            <tr class="@(item.StockQuantity < 5 ? "table-danger" : "")">
+                                <td>
+                                    @item.Name
+                                    @if (item.StockQuantity < 5)
+                                    {
+                                        <span class="badge bg-danger ms-2">⚠️ Low Stock</span>
+                                    }
+                                </td>
+                                <td>@item.Category</td>
+                                <td>@item.Price.ToString("C")</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <form method="post" asp-page-handler="UpdateStock" class="d-inline">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <input type="hidden" name="change" value="-1" />
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">-</button>
+                                        </form>
+                                        <span class="badge @(item.StockQuantity < 5 ? "bg-danger" : item.StockQuantity < 10 ? "bg-warning text-dark" : "bg-success") px-3">
+                                            @item.StockQuantity
+                                        </span>
+                                        <form method="post" asp-page-handler="UpdateStock" class="d-inline">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <input type="hidden" name="change" value="1" />
+                                            <button type="submit" class="btn btn-sm btn-outline-success">+</button>
+                                        </form>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary edit-btn" 
+                                            data-id="@item.Id"
+                                            data-name="@item.Name"
+                                            data-description="@item.Description"
+                                            data-category="@item.Category"
+                                            data-price="@item.Price"
+                                            data-image="@item.ImageUrl">
+                                        Edit
+                                    </button>
+                                    <form method="post" asp-page-handler="Delete" class="d-inline">
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Menu Item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-page-handler="Edit">
+                    <input type="hidden" name="id" id="editId" />
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" name="Name" id="editName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <input type="text" class="form-control" name="Description" id="editDescription" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <select class="form-control" name="Category" id="editCategory" required>
+                            <option value="Seafood">Seafood</option>
+                            <option value="Sandwiches">Sandwiches</option>
+                            <option value="Casseroles">Casseroles</option>
+                            <option value="Pastries">Pastries</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Price</label>
+                        <input type="number" step="0.01" class="form-control" name="Price" id="editPrice" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Image URL</label>
+                        <input type="text" class="form-control" name="ImageUrl" id="editImageUrl" />
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- No duplicate bootstrap script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var editModal = new bootstrap.Modal(document.getElementById('editModal'));
+        
+        // Handle Edit Button Click
+        var editButtons = document.querySelectorAll('.edit-btn');
+        editButtons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var id = this.getAttribute('data-id');
+                var name = this.getAttribute('data-name');
+                var description = this.getAttribute('data-description');
+                var category = this.getAttribute('data-category');
+                var price = this.getAttribute('data-price');
+                var image = this.getAttribute('data-image');
+
+                document.getElementById('editId').value = id;
+                document.getElementById('editName').value = name;
+                // Handle potential null/empty values
+                document.getElementById('editDescription').value = description || '';
+                document.getElementById('editCategory').value = category;
+                document.getElementById('editPrice').value = price;
+                document.getElementById('editImageUrl').value = image || '';
+
+                editModal.show();
+            });
+        });
+    });
+</script>
